@@ -1,29 +1,34 @@
 from bvr.logger import Logger
 
 
-def bvr_try(logger_class=None, exception_type=Exception, should_raise=True, custom_exception=None, custom_message=None):
+def bvr_try(arg=None, logger_class=None, exception_type=Exception, should_raise=True, custom_exception=None, custom_message=None):
 
     if not logger_class:
         logger_class = Logger()
 
     if not hasattr(logger_class, 'error'):
-        print('logger_class fail')
+        # TODO: test
+        raise AttributeError("logger_class argument must have attribute error to properly log error")
 
     if not isinstance(exception_type, Exception.__class__):
-        print('exception_type fail')
+        # TODO: test
+        raise TypeError("{} argument must be of type {} ".format("exception_type", Exception.__class__))
 
     if not isinstance(should_raise, bool):
-        print(' should_raise fail')
+        # TODO: test
+        raise TypeError("{} argument must be of type {} ".format("should_raise", bool.__class__))
 
     if not isinstance(custom_exception, Exception.__class__) or custom_exception is not None:
-        print('custom_exception fail')
+        # TODO: test
+        raise TypeError("{} argument must be of type {} ".format("custom_exception", Exception.__class__))
 
     if not isinstance(custom_message, str) or custom_message is not None:
-        print('custom_message fail')
+        # TODO: test
+        raise TypeError("{} argument must be of type {} ".format("custom_message", str.__class__))
 
-    def decorator(func):
+    def bvr_try_decorator(func):
 
-        def wrapper(*args, **kwargs):
+        def bvr_try_wrapper(*args, **kwargs):
             try:
                 return func(*args, **kwargs)
             except exception_type as exception:  # pylint: disable=broad-except
@@ -48,5 +53,10 @@ def bvr_try(logger_class=None, exception_type=Exception, should_raise=True, cust
                     if not custom_exception:
                         raise
 
-        return wrapper
-    return decorator
+        return bvr_try_wrapper
+
+    if callable(arg):
+        return bvr_try_decorator(arg)
+    else:
+        return bvr_try_decorator
+    # return decorator

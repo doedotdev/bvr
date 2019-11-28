@@ -1,8 +1,11 @@
+import functools
 
 
 def bvr_end(arg=None):
     def bvr_end_decorator(func):
+        @functools.wraps(func)  # Just Keeps Identity of Function that is Decorated
         def bvr_end_wrapper(*args, **kwargs):
+            return_value = func(*args, **kwargs)
             msg = ("ENDED | "
                    "FUNCTION: {} | "
                    "ARGS: {} | "
@@ -12,7 +15,6 @@ def bvr_end(arg=None):
 
             print(msg)
 
-            return_value = func(*args, **kwargs)
             return return_value
         return bvr_end_wrapper
 

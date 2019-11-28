@@ -11,6 +11,7 @@ def test_bvr_hi_called_as_decorator(capsys):
 
     assert return_value == 2
     assert "Hi\nHi\n" in capsys.readouterr().out
+    assert hi.__name__ == "hi"  # Important for decorators to not override method name
 
 
 def test_bvr_hi_called_as_callable_returning_decorator(capsys):
@@ -23,6 +24,7 @@ def test_bvr_hi_called_as_callable_returning_decorator(capsys):
 
     assert return_value == 2
     assert "Hi\nHi\n" in capsys.readouterr().out
+    assert hi.__name__ == "hi"  # Important for decorators to not override method name
 
 
 def test_bvr_hi_called_as_decorator_with_function_args(capsys):
@@ -36,6 +38,7 @@ def test_bvr_hi_called_as_decorator_with_function_args(capsys):
 
     assert return_value == "Hello"
     assert "Hi\nHello\nHi\n" in capsys.readouterr().out
+    assert hi.__name__ == "hi"  # Important for decorators to not override method name
 
 
 def test_bvr_hi_called_as_callable_returning_decorator_with_function_args(capsys):
@@ -49,3 +52,4 @@ def test_bvr_hi_called_as_callable_returning_decorator_with_function_args(capsys
 
     assert return_value == "Hello"
     assert "Hi\nHello\nHi\n" in capsys.readouterr().out
+    assert hi.__name__ == "hi"  # Important for decorators to not override method name
