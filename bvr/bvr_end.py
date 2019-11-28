@@ -20,5 +20,5 @@ def bvr_end(arg=None):
 
     if callable(arg):
         return bvr_end_decorator(arg)
-    else:
-        return bvr_end_decorator
+
+    return bvr_end_decorator

@@ -57,6 +57,5 @@ def bvr_try(arg=None, logger_class=None, exception_type=Exception, should_raise=
 
     if callable(arg):
         return bvr_try_decorator(arg)
-    else:
-        return bvr_try_decorator
-    # return decorator
+
+    return bvr_try_decorator

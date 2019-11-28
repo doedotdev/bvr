@@ -20,6 +20,5 @@ def bvr_start(arg=None):
 
     if callable(arg):
         return bvr_start_decorator(arg)
-    else:
-        return bvr_start_decorator
 
+    return bvr_start_decorator

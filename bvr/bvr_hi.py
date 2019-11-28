@@ -13,5 +13,5 @@ def bvr_hi(arg=None):
 
     if callable(arg):
         return bvr_hi_decorator(arg)
-    else:
-        return bvr_hi_decorator
+
+    return bvr_hi_decorator

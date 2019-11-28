@@ -1,33 +1,30 @@
+import functools
+from time import sleep
 
 
-def bvr_rest():
-    pass
+def bvr_rest(arg=None, seconds=1):
+    def bvr_rest_decorator(func):
+        @functools.wraps(func)  # Just Keeps Identity of Function that is Decorated
+        def bvr_rest_wrapper(*args, **kwargs):
+            msg = ("RESTING: {} second(s) | "
+                   "FUNCTION: {} | "
+                   "ARGS: {} | "
+                   "KWARGS: {} ").format(seconds,
+                                         func.__name__,
+                                         args,
+                                         kwargs)
 
+            print(msg)
 
-# import functools
+            sleep(seconds)
 
-def repeat(_func=None, *, num_times=2):
+            return_value = func(*args, **kwargs)
 
-    def decorator_repeat(func):
-        print(func.__name__)
+            return return_value
 
-        # @functools.wraps(func) # Just Keeps Identity of Function that is Decorated
-        def wrapper_repeat(*args, **kwargs):
-            for _ in range(num_times):
-                value = func(*args, **kwargs)
-            return value
-        return wrapper_repeat
+        return bvr_rest_wrapper
 
-    if _func is None:
-        return decorator_repeat
-    else:
-        return decorator_repeat(_func)
+    if callable(arg):
+        return bvr_rest_decorator(arg)
 
-
-@repeat
-def say_hi():
-    print('Hi')
-
-say_hi()
-
-print(say_hi.__name__)
+    return bvr_rest_decorator
