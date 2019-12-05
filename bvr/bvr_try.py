@@ -1,7 +1,8 @@
 from bvr.logger import Logger
 
 
-def bvr_try(arg=None, logger_class=None, exception_type=Exception, should_raise=True, custom_exception=None, custom_message=None):
+def bvr_try(arg=None, logger_class=None, exception_type=Exception, should_raise=True,
+            custom_exception=None, custom_message=None):
 
     if not logger_class:
         logger_class = Logger()

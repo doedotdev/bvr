@@ -21,6 +21,3 @@ setuptools.setup(
          "Operating System :: OS Independent",
      ],
  )
-
- # TODO: add keywords
- # TODO: add license type
