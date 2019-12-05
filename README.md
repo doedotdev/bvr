@@ -64,3 +64,7 @@ Utilizes
 - travis ci info
 - pylint score 10/10
 - apply to the class level
+- Smoke test that pip installs the latest version
+- smoke test then runs tests against that version to make sure no issues
+- todo: emd of deploy script deletes dist and egg files to clean itself up
+- todo: rem,ove initial arg which is not really needed
