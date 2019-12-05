@@ -1,4 +1,4 @@
-name: Python package
+name: Multi Version
 
 on: [push]
 
