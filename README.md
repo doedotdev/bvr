@@ -2,6 +2,9 @@
 BVR: Log like a Beaver
 
 [![PyPI version](https://badge.fury.io/py/bvr.svg)](https://badge.fury.io/py/bvr)
+![GitHub](https://img.shields.io/github/license/doedotdev/bvr)
+
+
 
 
 ## Install
