@@ -1,4 +1,4 @@
-name: Python application
+name: Deploy to Test Pypi
 
 on: [push]
 
@@ -18,7 +18,7 @@ jobs:
         echo Start
     - name: Deploy to Test PyPi
       run: |
-        deploy_test_pypi.sh
+        bash deploy_test_pypi.sh
     - name: End
       run: |
         echo End
