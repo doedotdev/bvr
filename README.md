@@ -1,6 +1,9 @@
 # bvr
 BVR: Log like a Beaver
 
+[![PyPI version](https://badge.fury.io/py/bvr.svg)](https://badge.fury.io/py/bvr)
+
+
 ## Install
 ```
 pip install bvr
