@@ -2,11 +2,14 @@ import functools
 
 
 def bvr_repeat(arg=None, times=2):
+    times = int(times)
+
     def bvr_repeat_decorator(func):
-        @functools.wraps(func)  # Just Keeps Identity of Function that is Decorated
+        @functools.wraps(func)
         def bvr_repeat_wrapper(*args, **kwargs):
+            return_value = None
             for i in range(times):
-                msg = ("REPEAT | {}/{} "
+                msg = ("REPEAT: {}/{} | "
                        "FUNCTION: {} | "
                        "ARGS: {} | "
                        "KWARGS: {} ").format(i + 1,

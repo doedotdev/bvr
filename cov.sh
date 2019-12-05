@@ -1,0 +1,1 @@
+coverage run --source=bvr/ -m pytest test/ && coverage report

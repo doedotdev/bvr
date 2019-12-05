@@ -3,7 +3,7 @@ import functools
 
 def bvr_hi(arg=None):
     def bvr_hi_decorator(func):
-        @functools.wraps(func)  # Just Keeps Identity of Function that is Decorated
+        @functools.wraps(func)
         def bvr_hi_wrapper(*args, **kwargs):
             print("Hi")
             return_value = func(*args, **kwargs)

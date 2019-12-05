@@ -45,7 +45,7 @@ def bvr_rest_after(arg=None, seconds=5, countdown=False):
         def bvr_rest_after_wrapper(*args, **kwargs):
             before_after = "AFTER"
             return_value = func(*args, **kwargs)
-            handle_sleeper(before_after, countdown, func, seconds, *args, **kwargs)
+            handle_sleeper(countdown, before_after, func, seconds, *args, **kwargs)
 
             return return_value
 
@@ -75,11 +75,3 @@ def bvr_rest_before(arg=None, seconds=5, countdown=False):
         return bvr_rest_before_decorator(arg)
 
     return bvr_rest_before_decorator
-
-
-@bvr_rest_before(seconds=10, countdown=True)
-def hi():
-    print("hello")
-
-
-hi()

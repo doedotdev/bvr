@@ -3,7 +3,7 @@ import functools
 
 def bvr_start(arg=None):
     def bvr_start_decorator(func):
-        @functools.wraps(func)  # Just Keeps Identity of Function that is Decorated
+        @functools.wraps(func)
         def bvr_start_wrapper(*args, **kwargs):
             msg = ("STARTED | "
                    "FUNCTION: {} | "

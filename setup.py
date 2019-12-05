@@ -6,8 +6,8 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='bvr',  
-     version='0.0.2',
-     scripts=[] ,
+     version='0.0.3',
+     scripts=[],
      author="doedotdev",
      author_email="doedotdev@gmail.com",
      description="BVR: Log like a Beaver",
