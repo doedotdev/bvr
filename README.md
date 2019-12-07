@@ -11,18 +11,18 @@ pip install bvr
 ```
 
 ### bvr decorators
-- @bvr_start | log when a method starts
-- @bvr_end | log when a method ends
-- @bvr_start_end | log when a method starts and ends
-- @bvr_rest_before | log and sleep before a method starts
-- @bvr_rest_after | log and sleep after a method ends 
-- @bvr_time | log the amount of time a method takes
-- @bvr_try | log and catch an exception
-- @bvr_repeat | log and repeat a method
-- bvr_compose | compose multiple other bvr decorators on a single method
+- [@bvr_start | log when a method starts](#go-to-bvr-start)
+- [@bvr_end | log when a method ends](#go-to-bvr-end)
+- [@bvr_start_end | log when a method starts and ends](#go-to-bvr-start-end)
+- [@bvr_rest_before | log and sleep before a method starts](#go-to-bvr-rest-before)
+- [@bvr_rest_after | log and sleep after a method ends](#go-to-bvr-rest-after)
+- [@bvr_time | log the amount of time a method takes](#go-to-bvr-time)
+- [@bvr_try | log and catch an exception](#go-to-bvr-try)
+- [@bvr_repeat | log and repeat a method](#go-to-bvr-repeat)
+- [@bvr_compose | compose multiple other bvr decorators on a single method](#go-to-bvr-compose)
 
 
-### @bvr_start | log when a method starts
+### @bvr_start | log when a method starts (#go-to-bvr-start)
 
 Example:
 ```
@@ -44,7 +44,7 @@ hello
 ```
 
 
-### @bvr_end | log when a method ends
+### @bvr_end | log when a method ends (#go-to-bvr-end)
 
 Example:
 ```
@@ -65,7 +65,7 @@ hello
 ENDED | FUNCTION: example_one | ARGS: () | KWARGS: {}
 ```
 
-### @bvr_start_end | log when a method starts and ends
+### @bvr_start_end | log when a method starts and ends (#go-to-bvr-start-end)
 
 Example:
 ```
@@ -87,6 +87,24 @@ hello
 
 ENDED | FUNCTION: example_one | ARGS: () | KWARGS: {} 
 ```
+
+### @bvr_rest_before | log and sleep before a method starts (#go-to-bvr-rest-before)
+Coming Soon!
+
+### @bvr_rest_after | log and sleep after a method ends (#go-to-bvr-rest-after)
+Coming Soon!
+
+### @bvr_time | log the amount of time a method takes (#go-to-bvr-time)
+Coming Soon!
+
+### @bvr_try | log and catch an exception (#go-to-bvr-try)
+Coming Soon!
+
+### @bvr_repeat | log and repeat a method n times (#go-to-bvr-repeat)
+Coming Soon!
+
+### @bvr_compose | compose multiple other bvr decorators on a single method (#go-to-bvr-compose)
+Coming Soon!
 
 
 # TODO:
