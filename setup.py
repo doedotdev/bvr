@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='bvr',  
-     version='0.0.3',
+     version='0.0.5',
      scripts=[],
      author="doedotdev",
      author_email="doedotdev@gmail.com",
