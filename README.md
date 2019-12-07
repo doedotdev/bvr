@@ -5,13 +5,22 @@ BVR: Log like a Beaver
 [![PyPI version](https://badge.fury.io/py/bvr.svg)](https://badge.fury.io/py/bvr)
 ![GitHub](https://img.shields.io/github/license/doedotdev/bvr)
 
-
-
-
 ## Install
 ```
 pip install bvr
 ```
+
+### bvr decorators
+- @bvr_start | log when a method starts
+- @bvr_end | log when a method ends
+- @bvr_start_end | log when a method starts and ends
+- @bvr_rest_before | log and sleep before a method starts
+- @bvr_rest_after | log and sleep after a method ends 
+- @bvr_time | log the amount of time a method takes
+- @bvr_try | log and catch an exception
+- @bvr_repeat | log and repeat a method
+- bvr_compose | compose multiple other bvr decorators on a single method
+
 
 ### @bvr_start | log when a method starts
 
@@ -34,6 +43,50 @@ STARTED | FUNCTION: example_one | ARGS: () | KWARGS: {}
 hello
 ```
 
+
+### @bvr_end | log when a method ends
+
+Example:
+```
+from bvr import bvr_end
+
+@bvr_end
+def example_one():
+    print("hello")
+    return 3
+
+example_one()
+```
+
+Output:
+```
+hello
+
+ENDED | FUNCTION: example_one | ARGS: () | KWARGS: {}
+```
+
+### @bvr_start_end | log when a method starts and ends
+
+Example:
+```
+from bvr import bvr_start_end
+
+@bvr_start_end
+def example_one():
+    print("hello")
+    return 3
+
+example_one()
+```
+
+Output:
+```
+STARTED | FUNCTION: example_one | ARGS: () | KWARGS: {}
+
+hello
+
+ENDED | FUNCTION: example_one | ARGS: () | KWARGS: {} 
+```
 
 
 # TODO:
