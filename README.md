@@ -11,15 +11,15 @@ pip install bvr
 ```
 
 ### bvr decorators
-- [bvr_start | log when a method starts](#bvr_start)
-- [bvr_end | log when a method ends](#bvr_end)
-- [bvr_start_end | log when a method starts and ends](#bvr_start_end)
-- [bvr_rest_before | log and sleep before a method starts](#bvr_rest_before)
-- [bvr_rest_after | log and sleep after a method ends](#bvr_rest_after)
-- [bvr_time | log the amount of time a method takes](#bvr_time)
-- [bvr_try | log and catch an exception](#bvr_try)
-- [bvr_repeat | log and repeat a method](#bvr_repeat)
-- [bvr_compose | compose multiple other bvr decorators on a single method](#bvr-compose)
+- [bvr_start: log when a method starts](#bvr_start)
+- [bvr_end: log when a method ends](#bvr_end)
+- [bvr_start_end: log when a method starts and ends](#bvr_start_end)
+- [bvr_rest_before: log and sleep before a method starts](#bvr_rest_before)
+- [bvr_rest_after: log and sleep after a method ends](#bvr_rest_after)
+- [bvr_time: log the amount of time a method takes](#bvr_time)
+- [bvr_try: log and catch an exception](#bvr_try)
+- [bvr_repeat: log and repeat a method](#bvr_repeat)
+- [bvr_compose: compose multiple other bvr decorators on a single method](#bvr-compose)
 
 
 ### bvr_start 
