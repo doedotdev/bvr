@@ -122,6 +122,23 @@ compose multiple other bvr decorators on a single method
 Coming Soon!
 
 
+## Tech Notes
+- Langauges
+    - Python
+    - Bash
+    - Markdown
+- Quality
+    - PyTest
+    - Coverage
+    - Pylint
+- Automation
+    - Github Actions
+    - Travis CI
+- Hosting
+    - Test PyPi
+    - Prod Pypi
+
+
 # TODO:
 - Docs Badge passing
 - test passing
