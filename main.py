@@ -1,8 +1,9 @@
 from bvr import bvr_start
 
 
-@bvr_start
-def divide_zero():
+@bvr_end
+def example_one():
     print("hello")
-x = divide_zero()
-print(x)
+    return 3
+
+example_one()

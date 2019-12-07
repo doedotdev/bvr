@@ -1,9 +1,52 @@
+import argparse
+import logging
 from pylint.lint import Run
 
-results = Run(['bvr/'], do_exit=False)
+
+logging.getLogger().setLevel(logging.INFO)
+
+parser = argparse.ArgumentParser(prog="LINT")
+
+parser.add_argument('-p',
+                    '--path',
+                    help='path to directory you want to run pylint on. %(default)s  %(type)s ',
+                    default='./src',
+                    type=str)
+
+parser.add_argument('-t',
+                    '--threshold',
+                    help='Foo the program',
+                    default=7,
+                    type=float)
+
+args = parser.parse_args()
+path = str(args.path)
+threshold = float(args.threshold)
+
+message = ('PyLint Starting | '
+           'Path: {} | '
+           'Threshold: {} '.format(path, threshold))
+
+logging.info(message)
+
+results = Run([path], do_exit=False)
 
 final_score = results.linter.stats['global_note']
 
-if final_score < 8:
-    raise Exception('Pylint Score Was Less Than 8: {}'.format(final_score))
-exit(1)
+if final_score < threshold:
+
+    message = ('PyLint Failed | '
+               'Score: {} | '
+               'Threshold: {} '.format(final_score, threshold))
+
+    logging.error(message)
+    raise Exception(message)
+
+else:
+    message = ('PyLint Passed | '
+               'Score: {} | '
+               'Threshold: {} '.format(final_score, threshold))
+
+    logging.info(message)
+
+    exit(0)

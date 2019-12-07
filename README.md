@@ -13,50 +13,27 @@ BVR: Log like a Beaver
 pip install bvr
 ```
 
-### @bvr_start
-- Logs when a method is starting
+### @bvr_start | log when a method starts
 
 Example:
 ```
+from bvr import bvr_start
+
 @bvr_start
 def example_one():
     print("hello")
     return 3
 
 example_one()
-
-# STARTED | FUNCTION: example_one | ARGS: () | KWARGS: {} 
 ```
 
-Example with ARGS:
+Output:
 ```
-@bvr_start
-def example_two(msg, value):
-    print(msg)
-    return value
+STARTED | FUNCTION: example_one | ARGS: () | KWARGS: {}
 
-example_two("Hi", 4)
-
-# STARTED | FUNCTION: example_two | ARGS: ('Hi', 4) | KWARGS: {}
+hello
 ```
 
-Example with KWARGS
-```
-@bvr_start
-def example_three(msg, value):
-    print(msg)
-    return value
-
-example_two(msg="Hi", value=4)
-
-# STARTED | FUNCTION: example_two | ARGS: () | KWARGS: {'msg': 'Hi', 'value': 4} 
-```
-
-### bvr_end
-Logs after the function is called
-
-### bvr_start_end
-Utilizes 
 
 
 # TODO:
