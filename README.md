@@ -11,7 +11,7 @@ pip install bvr
 ```
 
 ### bvr decorators
-- [@bvr_start | log when a method starts](#go-to-bvr-start)
+- [@bvr_start | log when a method starts](#bvr-start)
 - [@bvr_end | log when a method ends](#go-to-bvr-end)
 - [@bvr_start_end | log when a method starts and ends](#go-to-bvr-start-end)
 - [@bvr_rest_before | log and sleep before a method starts](#go-to-bvr-rest-before)
@@ -22,7 +22,8 @@ pip install bvr
 - [@bvr_compose | compose multiple other bvr decorators on a single method](#go-to-bvr-compose)
 
 
-### @bvr_start | log when a method starts (#go-to-bvr-start)
+### bvr start 
+| log when a method starts
 
 Example:
 ```
