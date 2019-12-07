@@ -11,21 +11,21 @@ pip install bvr
 ```
 
 ### bvr decorators
-- [@bvr_start | log when a method starts](#@bvr_start)
-- [@bvr_end | log when a method ends](#go-to-bvr-end)
-- [@bvr_start_end | log when a method starts and ends](#go-to-bvr-start-end)
-- [@bvr_rest_before | log and sleep before a method starts](#go-to-bvr-rest-before)
-- [@bvr_rest_after | log and sleep after a method ends](#go-to-bvr-rest-after)
-- [@bvr_time | log the amount of time a method takes](#go-to-bvr-time)
-- [@bvr_try | log and catch an exception](#go-to-bvr-try)
-- [@bvr_repeat | log and repeat a method](#go-to-bvr-repeat)
-- [@bvr_compose | compose multiple other bvr decorators on a single method](#go-to-bvr-compose)
+- [bvr_start | log when a method starts](#bvr_start)
+- [bvr_end | log when a method ends](#bvr_end)
+- [bvr_start_end | log when a method starts and ends](#bvr-start_end)
+- [bvr_rest_before | log and sleep before a method starts](#bvr_rest_before)
+- [bvr_rest_after | log and sleep after a method ends](#bvr_rest_after)
+- [bvr_time | log the amount of time a method takes](#bvr_time)
+- [bvr_try | log and catch an exception](#bvr_try)
+- [bvr_repeat | log and repeat a method](#bvr_repeat)
+- [bvr_compose | compose multiple other bvr decorators on a single method](#bvr-compose)
 
 
-### @bvr_start 
-| log when a method starts
+### bvr_start 
+log when a method starts
 
-Example:
+example:
 ```
 from bvr import bvr_start
 
@@ -37,7 +37,7 @@ def example_one():
 example_one()
 ```
 
-Output:
+output:
 ```
 STARTED | FUNCTION: example_one | ARGS: () | KWARGS: {}
 
@@ -45,9 +45,10 @@ hello
 ```
 
 
-### @bvr_end | log when a method ends (#go-to-bvr-end)
+### bvr_end
+log when a method ends
 
-Example:
+example:
 ```
 from bvr import bvr_end
 
@@ -59,16 +60,17 @@ def example_one():
 example_one()
 ```
 
-Output:
+output:
 ```
 hello
 
 ENDED | FUNCTION: example_one | ARGS: () | KWARGS: {}
 ```
 
-### @bvr_start_end | log when a method starts and ends (#go-to-bvr-start-end)
+### bvr_start_end
+log when a method starts and ends
 
-Example:
+example:
 ```
 from bvr import bvr_start_end
 
@@ -80,7 +82,7 @@ def example_one():
 example_one()
 ```
 
-Output:
+output:
 ```
 STARTED | FUNCTION: example_one | ARGS: () | KWARGS: {}
 
@@ -89,22 +91,34 @@ hello
 ENDED | FUNCTION: example_one | ARGS: () | KWARGS: {} 
 ```
 
-### @bvr_rest_before | log and sleep before a method starts (#go-to-bvr-rest-before)
+### @bvr_rest_before
+log and sleep before a method starts
+
 Coming Soon!
 
-### @bvr_rest_after | log and sleep after a method ends (#go-to-bvr-rest-after)
+### @bvr_rest_after
+log and sleep after a method ends
+
 Coming Soon!
 
-### @bvr_time | log the amount of time a method takes (#go-to-bvr-time)
+### @bvr_time
+log the amount of time a method takes
+
 Coming Soon!
 
-### @bvr_try | log and catch an exception (#go-to-bvr-try)
+### @bvr_try
+log and catch an exception
+
 Coming Soon!
 
-### @bvr_repeat | log and repeat a method n times (#go-to-bvr-repeat)
+### @bvr_repeat
+log and repeat a method n times
+
 Coming Soon!
 
-### @bvr_compose | compose multiple other bvr decorators on a single method (#go-to-bvr-compose)
+### @bvr_compose
+compose multiple other bvr decorators on a single method
+
 Coming Soon!
 
 
