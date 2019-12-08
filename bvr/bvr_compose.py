@@ -1,6 +1,6 @@
 
 
-def bvr_compose(arg=None, *decorators):
+def bvr_compose(decorators, arg=None):
     def bvr_compose_decorator(func):
         for decorator in decorators:
             print("IN  PROGRESS....")

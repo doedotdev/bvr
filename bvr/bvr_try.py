@@ -1,11 +1,11 @@
-from bvr.logger import Logger
+# from bvr.logger import LOG
 
 
 def bvr_try(arg=None, logger_class=None, exception_type=Exception, should_raise=True,
             custom_exception=None, custom_message=None):
 
     if not logger_class:
-        logger_class = Logger()
+        logger_class = None
 
     if not hasattr(logger_class, 'error'):
         # TODO: test
